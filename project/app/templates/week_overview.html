@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Weather for {{ city }} </title>
+    </head>
+    <body>
+    <h1> Water forecast for next week from {{ week.start }} to {{ week.end }}</h1>
+        {% for day in week_weather %}
+        <div><p>{{ day }} temperature : <b>{{ week_weather[day] }}</b></p></div>
+        {% endfor %}
+     {% if city %}
+        <title>Weather in {{ city }} </title>
+    {% else %}
+        <title>Weather in your city </title>
+    {% endif %}
+        <h1>From {{ week.start }} to {{ week.end }}</h1>
+    </body>
+</html>
